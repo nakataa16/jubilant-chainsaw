@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+<!--4. API REQUEST SERVER FILTER
+Вашата задача е да направите AJAX заявка към https://blacatzacademy.com/api/users, като
+покажете всички потребители и данните за тях в таблица. Най – отгоре направете търсачка
+с бутон, която изпраща заявка към сървъра с GET параметър и показва само върнатия
+резултат. Пример – човека въвежда 5 в търсачката и това сформира заявка към
+https://blacatzacademy.com/api/users?id=5, което връща само 1 потребител – показваме
+само данните за него.-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <div class="row mt-2 mb-2">
+            <div class="col-sm-9">
+                <input id="input" type="text" class="mt-10 form-control " placeholder="User Id">
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+       
+        
+        <div class="row">
+            <div class="col-sm-12" id="user-table"></div>
+        </div>
+    </div>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+<script>
+
+    $('#input').change(e => {
+        $('#user-table').html("");
+        let settings = getSettings(e.target.value);
+        $.ajax(settings);
+    });
+    
+  let getSettings = (idUser) => {
+    let baseApi = 'https://blacatzacademy.com/api/users';
+    return {
+        url: !!idUser ? (baseApi + "?id=" + idUser) : baseApi,
+        type: 'GET',
+        success: function(response) {
+         let users = response;
+         
+         let html='<table border="1" class="table">';
+
+        html +=`
+                <thead>
+                    <tr >
+                        <th scope="col">id</th>
+                        <th scope="col">name</th>
+                        <th scope="col">lastName</th>
+                        <th scope="col">age</th>
+                        <th scope="col">salary</th>
+                    </tr>
+                </thead>
+            `;
+            for (let i=0; i < users.length; i++) {
+
+                html += '<tr scope="row">';
+                html+=`<td>${users[i].id}</td>`;
+                html+=`<td>${users[i].name}</td>`;
+                html+=`<td>${users[i].lastName}</td>`;
+                html+=`<td>${users[i].age}</td>`;
+                html+=`<td>${users[i].salary}</td>`;
+                html += '</tr>';
+            }   
+            html += '</table>';
+            $('#user-table').html(html);
+        }
+    };
+  }
+  function init() {
+    let settings = getSettings();
+    $.ajax(settings);
+}
+
+$(function() {
+  init();
+});
+</script>

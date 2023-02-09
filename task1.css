@@ -1,0 +1,755 @@
+*{ 
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+ }
+
+img {
+    width:100%;
+}
+
+/*header start*/ 
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+   
+    
+  }
+
+  .topnav img {
+    width:3rem;
+
+  
+   
+  }
+   
+  .ahr {
+    display: flex;
+    margin-left: 60rem;
+    margin-top: 0.5rem;
+    
+  
+  }
+
+    .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+   
+    
+
+  }
+  
+  .topnav a.icon {
+    color: azure;
+    
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+
+  .topnav a:hover {
+    background-color:transparent;
+    color: white;
+  }
+  
+ 
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+/*header end*/
+/*second part start*/
+
+.main {
+    width: 100%;
+    display:flex;
+    position: relative;
+    z-index: -1;
+
+}
+
+.left {
+    width: 40%;
+    margin-top: 10rem;
+    
+}
+
+.right {
+    width: 60%;
+    
+}
+ 
+h2{
+    color: chartreuse;
+    font-size: 2.5rem;
+    margin-left: 3rem;
+}
+h1{
+    color: darkorange;
+    font-size: 4rem;
+    margin-left: 3rem;
+    
+}
+
+h4{
+    margin-left: 3rem;
+}
+ 
+.btn {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 3rem;
+    padding: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    color: chartreuse;
+    border-color: chartreuse;
+}
+/*third part*/
+
+.navi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    
+    
+}
+
+.input{
+   margin-left: 0.5rem;
+   font-size: 2rem;
+
+  
+}
+
+.bnt{
+    background-color: green;
+    color: azure;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+
+}
+/*third part end*/
+/*fourth parth*/
+
+.team {
+  display: flex;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.leftpic{
+  padding-right: 2rem;
+}
+ 
+.rightpic{
+  margin-top: 5rem;
+}
+
+
+h3{
+ border-left: 4px solid chartreuse;
+}
+/*fourth part end*/
+/*fifth part*/
+.motiv {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+h3{
+  border-left: 4px solid chartreuse;
+}
+/*fifth end*/
+/*sixth part*/
+
+.container{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-auto-rows: 3rem;
+gap: 1rem;
+margin-top: 2rem;
+}
+
+
+
+.box:nth-child(1){
+ grid-column: 1;
+ grid-row: 1/8;
+}
+
+.box:nth-child(2){
+  grid-column: 2;
+  grid-row: 1/8;
+}
+.box:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1/8;
+
+}
+
+.box:nth-child(4) {
+  grid-column: 1;
+  grid-row: 8/15;
+}
+
+.box:nth-child(5) {
+  grid-column: 2;
+  grid-row: 8/15;
+}
+
+.box:nth-child(6) {
+  grid-column: 3;
+  grid-row: 8/15;
+}
+
+.btns {
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  color: chartreuse;
+  border-color: chartreuse;
+  margin-left: 36rem;
+}
+/*sixth end*/
+/*seventh*/
+
+.price{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.pricetable{
+  margin-top: 2rem;
+  display: flex;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.pricebox {
+  height: 500px;
+  width: 100%;
+  padding: 0.5rem;
+  
+}
+
+.phead {
+  width: 100%;
+  height: 20%;
+  background-color: orange;
+  color: azure;
+  padding-top: 2rem;
+}
+
+.pbottom {
+  width:100%;
+  height: 80%;
+  background-color: orangered;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.priced {
+  font-size: 2rem;
+}
+
+
+
+.border {
+  border: 4px solid whitesmoke;
+  width:2rem;
+  margin-left: 10rem;
+  
+}
+
+.btnss{
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  background-color: chartreuse;
+  color: azure;
+  border: none;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
+}
+/*seventh end*/
+/*eight */
+
+.lastpics {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-auto-rows: 2rem;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+
+.boxs:nth-child(1){
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.boxs:nth-child(2) {
+  grid-column: 4;
+  grid-row: 1/5;
+}
+
+.boxs:nth-child(3) {
+  grid-column: 5;
+  grid-row: 2/4;
+}
+/*eight end*/
+/*ninth*/
+
+.icons {
+  margin-top: 12rem;
+  width: 100%;
+  
+  background-color: orange;
+  color: azure;
+}
+
+h7{
+
+  font-size: 2rem;
+  border-left: 3px solid white;
+  margin-left: 25rem;
+  
+}
+
+.ic{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+ 
+}
+
+.pics{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  
+}
+
+.but {
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border: none;
+ margin-top: 2rem;
+ margin-left: 32rem;
+ margin-bottom: 3rem;
+}
+/*ninth end*/
+/*tenth*/
+
+.pesho{
+  margin-top: 3rem;
+}
+
+
+
+.peshoo {
+  border: 2px solid black;
+  display: flex;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 2rem;
+}
+
+h3{
+  text-align: center;
+}
+
+.peshoimg {
+  width:10%;
+  margin-left: 5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-left: 18px solid orange;
+  
+  
+}
+
+.peshotext {
+  margin-top: 1rem;
+  margin-right: 5rem;
+}
+
+.bord{
+  width: 10%;
+  border-top: solid 3px black;
+  margin-top: 0.5rem;
+  margin-left: 0.1rem;
+}
+.pbor{
+  display: flex;
+
+}
+
+.round {
+  border-radius: 50%;
+  margin:2.5rem;
+  background-color: orange;
+  color: azure;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 16px;
+}
+/*tenth end*/
+/*eleventh*/
+
+.last{
+  margin-top: 3rem;;
+}
+
+.maps{
+  display: flex;
+  background: orange;
+  margin-top: 2rem;
+
+}
+
+.map {
+  width: 50%;
+}
+
+.info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 6rem;
+  margin-left: -3rem;
+
+}
+
+.butn{
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border: none;
+  width: 25%;
+  color: azure;
+  background-color: green;
+  margin-left: 27rem;
+
+
+}
+
+/*eleventh end*/
+/*twelvth*/
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-auto-rows:2rem ;
+ padding-top: 3rem;
+  background: orange;
+  color: azure;
+
+}
+
+.boxes:nth-child(1){
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.boxes:nth-child(2){
+  grid-column: 3;
+  grid-row: 1;
+}
+.boxes:nth-child(3){
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.boxes:nth-child(4){
+  grid-column: 5;
+  grid-row: 1;
+}
+.boxes:nth-child(5){
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.boxes:nth-child(6){
+  grid-column: 3;
+  grid-row: 3/6;
+}
+
+.boxes:nth-child(7){
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.boxes:nth-child(8 ){
+  grid-column: 5;
+  grid-row: 3/5;
+}
+ 
+.boxes:nth-child(9){
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.boxes:nth-child(10){
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.boxes:nth-child(11){
+  grid-column: 5;
+  grid-row: 5/7;
+}
+
+.boxes:nth-child(12){
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.boxes:nth-child(13){
+  grid-column: 4;
+  grid-row: 5;
+}
+
+.boxes:nth-child(14){
+  grid-column: 4;
+  grid-row: 6;
+}
+
+.boxes:nth-child(15){
+  grid-column: 5;
+  grid-row: 7/9;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.buton{
+  background-color: green;
+  color: azure;
+  padding: 0.5rem;
+}
+
+.posleden{
+  background: orange;
+  color:white;
+  text-align: center;
+}
+
+.pos{
+  width: 40%;
+  border: 1px solid white;
+  margin-left: 23rem;
+}
+
+@media(max-width:1024px) {
+  /*first part*/
+*{
+  text-align: center;
+  margin:0px;
+}
+
+.topnav{
+  width: 100%;
+}
+
+.fa-bars {
+  color: orange;
+  background-color: transparent;
+}
+
+  .right {
+    display:none;
+  }
+
+  .left {
+    width: 100%;
+     }
+
+     h1{
+    
+      font-size: 1.5rem;
+     }
+
+  .navi {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .team {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+  }
+
+  .leftpic {
+    width: 100%;
+    margin-right: 27rem;
+  }
+
+  .rightpic {
+    width: 100%;
+    margin-right: 27rem;
+
+  }
+
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btns {
+    margin: 0px;
+  }
+
+  h3{
+    width: 70%;
+    
+  }
+
+  .btn{
+    width: 50%;
+    
+  }
+
+  .price {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricetable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  .btnss {
+    display: none;
+  }
+
+  .lastpics {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+  }
+
+  .icons {
+    width: 100%;
+  
+  }
+
+.ic {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .pesho{
+    width: 100%;
+  }
+
+  .peshoo {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px;
+  }
+
+  .peshoimg {
+    width: 40%;
+    border-left: 18px solid orange;
+    margin-right: 10rem;
+   
+  }
+
+  .peshotext {
+    margin-left: 1rem;
+    
+  }
+
+ .maps {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+
+ }
+
+ .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding-bottom: 2rem;
+ }
+
+ .map{
+  margin-right: 10.4rem;
+  margin-top: 5rem;
+ 
+ }
+
+ .butn {
+  width: 70%;
+  margin: 0px;
+  
+ }
+
+ .container-fluid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  
+ }
+
+}
